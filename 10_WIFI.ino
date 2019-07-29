@@ -96,8 +96,8 @@ void updateMDNS() {
 //----------------------------------------------------------------------------------------
 
 void defaultWifiSettings() {
-  strcpy(wset.ssid, "Labotronik-4G");
-  strcpy(wset.pwd, "jes@ppellegr00t");
+  strcpy(wset.ssid, "ssid");
+  strcpy(wset.pwd, "password");
 }
 
 void saveWifiSettings() {
