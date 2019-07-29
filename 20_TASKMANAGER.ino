@@ -43,18 +43,35 @@ void updateTaskAssign() {
 void updateTaskTimers() {
   if (wateringTask == ONGOING && wateringTimer >= WATER_TIME * 60000) {
     wateringTask = DONE;
+    wateringTimer = 0;
     water = 0;
     waterOff();
     debugPrint(AUTO_WATER_OFF);
   }
+  else if (wateringTask == DONE && wateringTimer >= WATER_TIME * 60000) {
+    wateringTask = NOT_ASSIGNED;
+    wateringTimer = 0;
+  }
+  
   if (aerationTask == ONGOING && aerationTimer >= FAN_TIME * 60000) {
     aerationTask = DONE;
+    aerationTimer = 0;
     fan = 0;
     fanOff();
     debugPrint(AUTO_AIR_OFF);
   }
+  else if (aerationTask == DONE && aerationTimer >= MONITOR_TIME * 60000) {
+    aerationTask = NOT_ASSIGNED;
+    aerationTimer = 0;
+  }
+  
   if (windowsTask == ONGOING && windowsTimer >= MOTOR_TIME * 1000) {
-    windowsTask = DONE;
+    windowsTask = DONE; 
+    windowsTimer = 0;
+  }
+  else if (windowsTask == DONE && windowsTimer >= MONITOR_TIME * 60000) {
+    windowsTask = NOT_ASSIGNED;
+    windowsTimer = 0;
   }
 }
 
