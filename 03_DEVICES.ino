@@ -38,7 +38,7 @@ void initDevice() {
   // Extender Configuration
   pinMode(WATER_PIN, OUTPUT);
   pinMode(FAN_PIN, OUTPUT);
-  pinMode(LED_BUILTIN,OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   pinMode(TANK_PIN, INPUT_PULLUP);
   tank.attach(TANK_PIN);
   tank.interval(250);
@@ -60,12 +60,16 @@ void updateBlink() {
     uint32_t c = LIGHT_OFF;
     if (blinkState) c = LIGHT_BLINK;
     else if (light) c = LIGHT_ON;
-    for (int i=0; i<4; i++) {
-      strip.setPixelColor(i*6, c);
+    for (int i = 0; i < 4; i++) {
+      strip.setPixelColor(i * 6, c);
     }
     strip.show();
     blinkTimer = 0;
   }
+}
+
+void blinkOff() {
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 //----------------------------------------------------------------------------------------

@@ -93,10 +93,12 @@ void updateDeepSleep() {
       updateNTP(false);
       sleepTime = nextStart - millis()/1000;
     }
+    disconnectWifi();
     debugPrint(DEEP_SLEEP);
     changeLight(LIGHT_OFF);
-    digitalWrite(LED_BUILTIN, HIGH);
-    WiFi.disconnect();
+    blinkOff();
+    waterOff();
+    fanOff();
     SPIFFS.end();
     ESP.deepSleep(sleepTime * 1000000);
   }
