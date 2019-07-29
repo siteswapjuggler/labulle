@@ -1,0 +1,83 @@
+﻿<!doctype html>
+<html dir="ltr" lang="fr">
+	<head>
+			<!-- Required meta tags -->
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			
+			<!-- build:css css/wifi.css -->
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<link rel="stylesheet" href="css/bubble.css">
+			<link rel="stylesheet" href="css/sprite.css">
+			<!-- endbuild -->
+			
+			<!-- Metadata -->
+			<link rel="icon" href="img/favicon.ico" />
+			<title></title>
+	</head>
+    
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark top">
+			<div class="container">
+						<span class="align-middle" style="font-size:2em">
+							<img src="img/logo.png" width="100%" class="d-inline-block">
+						</span>
+				</div>
+		</nav>
+							
+		<main role="main" class="container">
+		
+			<div class="starter-template mt-5 mb-5">
+				<h1 multi="welcome-title"></h1>
+				<p class="lead" multi="welcome-msg"></p>
+			</div>
+			
+			<div>
+				<form class="needs-validation" method="post" action="/setConfig">
+				
+					<!-- Config WiFI -->
+					<h4 class="mb-3 mt-3" multi="wifi-form-title"></h4>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="ssid" multi="wifi-form-network-label"></label>
+							<div class="input-group">
+								<select class="custom-select" id="ssid" name="ssid">
+								<option selected multi="wifi-form-network-nowifi"></option>
+								</select>
+								<div class="input-group-addon">
+									<button class="btn btn-secondary btn-md" type="button" onclick="scanNetwork()" aria-disabled="true" style="margin-left:10px;spadding: 0.36rem .75rem">
+										<i class="icon icon-sync"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 mb-3" id="show_hide_password">
+							<label for="pwd" multi="wifi-form-password-label"></label>
+							<div class="input-group">
+								<input type="password" class="form-control" id="pwd" name="pwd" multi="wifi-form-password-placehoder" placeholder="">
+								<div class="input-group-addon">
+									<button class="btn btn-secondary btn-md" type="button" onclick="togglePassword()" aria-disabled="true" style="margin-left:10px;spadding: 0.36rem .75rem">
+										<i class="icon icon-eye-closed" id="view"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<!-- Appliquer  -->
+					<div class="float-right mt-5">
+						<button class="btn btn-success btn-lg" type="submit" multi="submit-button"></button>
+					</div>
+					
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
+
+<!-- build:js script/wifi.js -->
+<script src="script/wifi-multi.js"></script>
+<script src="script/translation.js"></script>
+<script src="script/wifi-script.js"></script>
+<!-- endbuild -->

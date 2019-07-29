@@ -1,0 +1,69 @@
+.container {
+	max-width: 720px;
+}
+
+.spacement {
+	padding: 1.4rem 0 0 0;
+}
+
+.spacement p {
+	padding: 1rem 1rem;
+}
+
+li ul {
+   list-style-type: none;
+   padding-left : 0px;
+}
+
+li li:before {
+   content: '- ';
+}
+
+.icon {
+  display: block;
+}
+
+.config-title {
+	display:inline-block; 
+	width:180px;
+}
+
+.va {
+	vertical-align: middle;
+	margin-right: 10px;
+	display:inline-block;
+}
+
+.tac {
+	text-align: center;
+}
+
+.h5, h5 {
+	font-size:1.05rem;
+}
+
+.custom-range {
+	width:50%;
+	margin:0 10px;
+	vertical-align:middle;
+	position:relative;
+	top:-2px;
+}
+
+.custom-control {
+	display:inline-block;
+}
+
+.lt {
+	width:75px;
+}
+
+.val {
+	display:inline-block;
+	text-align:left;
+	width:50px;
+}
+
+.slow  .switch-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+.fast  .switch-group { transition: left 0.1s; -webkit-transition: left 0.1s; }
+.quick .switch-group { transition: none;      -webkit-transition: none; }

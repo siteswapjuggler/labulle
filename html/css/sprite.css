@@ -1,0 +1,114 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-eye-closed {
+  background-image: url(../img/sprite.png);
+  background-position: -50px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-eye {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -144px;
+  width: 24px;
+  height: 24px;
+}
+.icon-fan {
+  background-image: url(../img/sprite.png);
+  background-position: -50px -120px;
+  width: 50px;
+  height: 50px;
+}
+.icon-humidity {
+  background-image: url(../img/sprite.png);
+  background-position: -180px 0px;
+  width: 50px;
+  height: 50px;
+}
+.icon-light {
+  background-image: url(../img/sprite.png);
+  background-position: -180px -50px;
+  width: 50px;
+  height: 50px;
+}
+.icon-sleep {
+  background-image: url(../img/sprite.png);
+  background-position: -60px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-soil {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -120px;
+  width: 50px;
+  height: 50px;
+}
+.icon-soilTh {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-start {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-stop {
+  background-image: url(../img/sprite.png);
+  background-position: -60px -60px;
+  width: 60px;
+  height: 60px;
+}
+.icon-sync {
+  background-image: url(../img/sprite.png);
+  background-position: -150px -120px;
+  width: 24px;
+  height: 24px;
+}
+.icon-tank {
+  background-image: url(../img/sprite.png);
+  background-position: -180px -100px;
+  width: 50px;
+  height: 50px;
+}
+.icon-temp {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -170px;
+  width: 50px;
+  height: 50px;
+}
+.icon-tempTh {
+  background-image: url(../img/sprite.png);
+  background-position: -120px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-watering {
+  background-image: url(../img/sprite.png);
+  background-position: -100px -120px;
+  width: 50px;
+  height: 50px;
+}
+.icon-windows {
+  background-image: url(../img/sprite.png);
+  background-position: -120px -60px;
+  width: 50px;
+  height: 50px;
+}
