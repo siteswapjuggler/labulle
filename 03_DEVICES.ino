@@ -56,6 +56,14 @@ void updateBlink() {
   if (blinkTimer >= BLINK_DELAY) {
     blinkState = blinkState ? false : true;
     digitalWrite(LED_BUILTIN, blinkState);
+
+    uint32_t c = LIGHT_OFF;
+    if (blinkState) c = LIGHT_BLINK;
+    else if (light) c = LIGHT_ON;
+    for (int i=0; i<4; i++) {
+      strip.setPixelColor(i*6, c);
+    }
+    strip.show();
     blinkTimer = 0;
   }
 }

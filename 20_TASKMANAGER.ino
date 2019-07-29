@@ -77,6 +77,7 @@ void updateDeepSleep() {
       sleepTime = nextStart - millis()/1000;
     }
     debugPrint(DEEP_SLEEP);
+    changeLight(LIGHT_OFF);
     digitalWrite(LED_BUILTIN, HIGH);
     WiFi.disconnect();
     SPIFFS.end();

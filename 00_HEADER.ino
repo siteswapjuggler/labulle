@@ -47,6 +47,7 @@
 #define NEOPIXEL_NUM  24
 #define LIGHT_ON      0x404040
 #define LIGHT_OFF     0x000000
+#define LIGHT_BLINK   0x004000
 
 #define SOIL_PIN      A0
 
