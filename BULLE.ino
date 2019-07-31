@@ -39,7 +39,7 @@ void setup() {
 }
 
 void loop() {
-  hasWifi = checkWifi(); // Reconnection en cas de besoin
+  //hasWifi = checkWifi(); // Reconnection en cas de besoin
   updateDNS();           // Important pour le maintien du DNS
   updateMDNS();          // Important pour le maintien du MSDNS
   updateServer();        // Gestion des requêtes du serveur
